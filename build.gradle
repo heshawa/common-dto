@@ -1,0 +1,11 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'org.springboot.java17'
+version = '1.0-SNAPSHOT'
+
+java {
+    withJavadocJar()
+    withSourcesJar()
+}
