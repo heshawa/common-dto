@@ -4,10 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ResponseMessage<T> {
-	private final String message;
+	private String message;
 	private boolean success = true;
 
 	private List<T> data;
+
+	public ResponseMessage() {
+		// Needed for Jackson deserialization
+	}
 
 	public ResponseMessage(String message) {
 		this.message = message;
@@ -28,7 +32,7 @@ public class ResponseMessage<T> {
 	}
 
 	public void setSuccess(boolean success) {
-		success = success;
+		this.success = success;
 	}
 
 	public List<T> getData() {
